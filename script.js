@@ -26,7 +26,7 @@ const operatorValue = (v) => {
 // checking if key is a number convert to string for display
 const formatResult = (n) => {
   return typeof n === "number" && !Number.isNaN(n)
-    ? parseFloat(n.toFixed(12)).toString()
+    ? Number.parseFloat(n.toFixed(12)).toString()
     : "Error";
 };
 
@@ -48,7 +48,6 @@ const displayResult = function () {
 
     //or hide it and show only current num - OS
     // display.value = state.current;
-    return;
   }
   // console.log(display.value);
 };
@@ -212,7 +211,7 @@ function handleButton(value) {
   // if (value >= "0" && value <= "9") return inputNumber(value);
 
   //from telegram -regex
-  const regex = /^[0-9]$/;
+  const regex = /^\d$/;
   if (regex.test(value)) return inputNumber(value);
 
   if (value === ".") return inputDecimal();
