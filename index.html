@@ -16,12 +16,13 @@
       <button id="toggle_calc_btn">&equals;</button>
 
       <!-- calculator -->
-      <div class="calculator hidden">
+      <div class="hidden calculator">
         <div class="display_container">
-        <input type="textarea"  class="display"/>
+        <label for="display" class="display-label">Display</label>
+        <input type="textarea" id="display" class="display"/>
       </div>
       <div class="keys">
-        <button class="btn_keys "  id="clear_btn_key">AC</button>
+        <button class="btn_keys"  id="clear_btn_key">AC</button>
         <button class="btn_keys" id="delete_btn_key">DEL</button>
         <button class="btn_keys">%</button>
         <button class="btn_keys">&divide;</button>
